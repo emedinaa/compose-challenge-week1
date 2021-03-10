@@ -98,7 +98,6 @@ fun View(navController: NavController, pet: Pet) {
 @Composable
 fun Header(navController: NavController) {
     Row(
-        horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
@@ -118,6 +117,7 @@ fun Header(navController: NavController) {
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center
         )
+        Spacer(modifier = Modifier.size(50.dp))
     }
 }
 
@@ -247,7 +247,7 @@ fun AboutSection(about: String) {
     Column {
         Text(text = "About", style = MaterialTheme.typography.h6)
         Spacer(modifier = Modifier.size(8.dp))
-        Text(text = about)
+        Text(text = about,textAlign = TextAlign.Justify )
     }
 }
 
